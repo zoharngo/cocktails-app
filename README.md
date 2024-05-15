@@ -1,5 +1,16 @@
 # Cocktails App
 
+## Installation
+
+1. Clone the repository: `git clone https://github.com/your-username/cocktails-app.git`
+2. Navigate to the project directory: `cd cocktails-app`
+3. Install the dependencies: `npm install`
+
+## Usage
+
+1. Start the application: `npm start`
+2. Open your browser and go to `http://localhost:5173`
+
 ## Google Authentication Setup
 
 To enable user authentication with Google, follow these steps:
@@ -13,22 +24,11 @@ To enable user authentication with Google, follow these steps:
 7. In your project directory, create a new file called `.env` if it doesn't already exist.
 8. Add the following line to the `.env` file, replacing `YOUR_CLIENT_ID` with the copied **Client ID**:
 
-  ```
-  VITE_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID
-  ```
+```
+VITE_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID
+```
 
 9. Save the `.env` file.
-
-## Installation
-
-1. Clone the repository: `git clone https://github.com/your-username/cocktails-app.git`
-2. Navigate to the project directory: `cd cocktails-app`
-3. Install the dependencies: `npm install`
-
-## Usage
-
-1. Start the application: `npm start`
-2. Open your browser and go to `http://localhost:5173`
 
 ## Features
 
