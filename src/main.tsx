@@ -7,7 +7,7 @@ import UserProvider from './providers/UserProvider.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <GoogleOAuthProvider clientId='187116866431-glt4u5aqcnklat1pf2dconftjlfo2929.apps.googleusercontent.com'>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
       <UserProvider>
         <App />
       </UserProvider>

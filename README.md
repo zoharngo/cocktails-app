@@ -11,7 +11,7 @@ This is a project for creating and managing cocktail recipes.
 ## Usage
 
 1. Start the application: `npm start`
-2. Open your browser and go to `http://localhost:3000`
+2. Open your browser and go to `http://localhost:5173`
 
 ## Features
 
