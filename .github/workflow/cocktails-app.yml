@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "./**"
-defaults:
-  run:
-    working-directory: .
 job:
   build:
     runs-on: ubuntu-latest
