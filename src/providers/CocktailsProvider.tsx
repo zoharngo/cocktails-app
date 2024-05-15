@@ -68,10 +68,19 @@ function CocktailsProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const addNewCocktail = useCallback(
-    (cocktail: Cocktail) => {
-      setCocktails([...cocktails, cocktail]);
+    async (newCocktail: Cocktail) => {
+      const uuid = Math.random().toString(36).substring(7);
+      newCocktail.id = uuid;
+      newCocktail.thumbnail = newCocktail.thumbnail || 'https://via.placeholder.com/150';
+      
+      const json = JSON.stringify(newCocktail);
+      const blob = new Blob([json], { type: 'application/json' });
+      const anchor = document.createElement('a');
+      anchor.href = URL.createObjectURL(blob);
+      anchor.download = `${newCocktail.name}-${uuid}.json`;
+      anchor.click();
     },
-    [cocktails]
+    []
   );
 
   return (

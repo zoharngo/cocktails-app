@@ -2,20 +2,37 @@ import { FieldValues, useForm } from 'react-hook-form';
 import { SubmitHandler } from 'react-hook-form';
 import TextTitle from '../TextTitle';
 import FormTextField from './FormTextField';
+import { useContext } from 'react';
+import cocktailsContext from '../../contexts/CocktailsContext';
+import { Cocktail } from '../../common/types/cocktail';
 
-function NewCocktailForm({
-  onNewCocktailChange,
-}: {
-  onNewCocktailChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}) {
+function NewCocktailForm() {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const { addNewCocktail } = useContext(cocktailsContext);
+
   const onSubmit: SubmitHandler<FieldValues> = (data: FieldValues) => {
     console.log(data);
+    const uuid = Math.random().toString(36).substring(7);
+    const newCocktail: Cocktail = {
+      id: uuid,
+      name: data.name,
+      category: data.category,
+      alcoholic: data.alcoholic,
+      glass: data.glass,
+      ingredients: data.ingredients.split(';') || [],
+      instructions: data.instructions,
+      measures: data.measures?.split(';') || [],
+      thumbnail: data.thumbnail || 'https://via.placeholder.com/150',
+    };
+    addNewCocktail(newCocktail);
+    reset();
+    alert('Cocktail added successfully');
   };
 
   return (
@@ -48,14 +65,7 @@ function NewCocktailForm({
             maxWidth: '700px',
           }}
         >
-          <FormTextField
-            label='Thumbnail'
-            name='thumbnail'
-            type='file'
-            register={register}
-            errors={errors}
-            onChange={() => {}}
-          />
+          <FormTextField label='Thumbnail' name='thumbnail' type='file' register={register} errors={errors} />
           <FormTextField
             label='Name'
             name='name'
@@ -63,8 +73,7 @@ function NewCocktailForm({
             placeholder='Name'
             register={register}
             errors={errors}
-            onChange={onNewCocktailChange}
-            value=''
+            required
           />
           <FormTextField
             label='Category'
@@ -73,10 +82,8 @@ function NewCocktailForm({
             placeholder='Cocktail'
             register={register}
             errors={errors}
-            onChange={() => {}}
-            value=''
+            required
           />
-
           <FormTextField
             label='Alcoholic'
             name='alcoholic'
@@ -84,10 +91,8 @@ function NewCocktailForm({
             placeholder='Alcoholic'
             register={register}
             errors={errors}
-            onChange={() => {}}
-            value=''
+            required
           />
-
           <FormTextField
             label='Glass'
             name='glass'
@@ -95,10 +100,8 @@ function NewCocktailForm({
             placeholder='Glass'
             register={register}
             errors={errors}
-            onChange={() => {}}
-            value=''
+            required
           />
-
           <FormTextField
             label='Instructions'
             name='instructions'
@@ -106,8 +109,7 @@ function NewCocktailForm({
             placeholder='Pour all ingredients into a cocktail shaker, mix and serve over ice into a chilled glass.'
             register={register}
             errors={errors}
-            onChange={() => {}}
-            value=''
+            required
           />
           <FormTextField
             label='Ingredients'
@@ -116,8 +118,7 @@ function NewCocktailForm({
             placeholder='Gin;Grand Marnier;Lemon Juice;Grenadine'
             register={register}
             errors={errors}
-            onChange={() => {}}
-            value=''
+            required
           />
           <FormTextField
             label='Measures'
@@ -126,8 +127,6 @@ function NewCocktailForm({
             placeholder='1 3/4 shot;1 shot;1/4 Shot;1/8 Shot'
             register={register}
             errors={errors}
-            onChange={() => {}}
-            value=''
           />
         </div>
 
@@ -151,10 +150,6 @@ function NewCocktailForm({
       </form>
     </div>
   );
-}
-
-interface NewCocktailFormProps {
-  onNewCocktailChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default NewCocktailForm;

@@ -1,6 +1,6 @@
 import { FieldErrors, FieldValues } from 'react-hook-form';
 
-function FormTextField({ label, name, type, value, onChange, placeholder, register, errors }: FormTextFieldProps) {
+function FormTextField({ label, name, type, placeholder, register, errors, required = false }: FormTextFieldProps) {
   return (
     <div
       style={{
@@ -49,6 +49,7 @@ function FormTextField({ label, name, type, value, onChange, placeholder, regist
 }
 
 interface FormTextFieldProps {
+  required?: boolean;
   label: string;
   name: string;
   type: string;
