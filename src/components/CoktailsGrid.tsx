@@ -11,7 +11,7 @@ function CoktailGrid({ coktailGridItems }: CoktailGridProps) {
         margin: '0 auto',
         padding: '20px',
         position: 'relative',
-        width: '100%',
+        width: 'auto',
       }}
     >
       {coktailGridItems.map((coktailGridItem) => (

@@ -4,7 +4,7 @@ function CocktailImage({ imgSrc, alt }: { imgSrc: string; alt: string }) {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        width: '300px',
+        maxWidth: '400px',
         height: 'auto',
       }}
     >

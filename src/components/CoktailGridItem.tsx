@@ -18,12 +18,12 @@ function CoktailGridItem({ cocktail }: CoktailGridItemProps) {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          width: '100%',
+          width: 'auto',
         }}
       >
         <img
           style={{
-            width: '100%',
+            width: '100vw',
             height: '200px',
             objectFit: 'cover',
             borderRadius: '5px',

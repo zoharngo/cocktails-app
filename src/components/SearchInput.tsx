@@ -11,16 +11,15 @@ function SearchInput({ searchValue, setSearchValue }: SearchInputProps) {
   return (
     <div
       style={{
-        width: '50vw',
+        width: '50vws',
         padding: '10px',
         borderRadius: '5px',
         boxShadow: '0 0 10px #282c34',
-       // backgroundColor: '#282c34',
       }}
     >
       <input
         style={{
-          width: '100%',
+          width: '100vws',
           padding: '10px',
           fontSize: '1.2em',
           borderRadius: '5px',

@@ -19,6 +19,7 @@ function NewCocktailForm() {
   const onSubmit: SubmitHandler<FieldValues> = (data: FieldValues) => {
     console.log(data);
     const uuid = Math.random().toString(36).substring(7);
+    const thumbnail = data.thumbnail as FileList;
     const newCocktail: Cocktail = {
       id: uuid,
       name: data.name,
@@ -28,11 +29,11 @@ function NewCocktailForm() {
       ingredients: data.ingredients.split(';') || [],
       instructions: data.instructions,
       measures: data.measures?.split(';') || [],
-      thumbnail: data.thumbnail || 'https://via.placeholder.com/150',
+      thumbnail: thumbnail[0]?.name || 'https://via.placeholder.com/150',
     };
     addNewCocktail(newCocktail);
-    reset();
-    alert('Cocktail added successfully');
+    //reset();
+    //alert('Cocktail added successfully');
   };
 
   return (

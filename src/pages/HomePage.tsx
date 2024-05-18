@@ -12,16 +12,14 @@ function HomePage() {
           top: 0,
           display: 'flex',
           height: '100vh',
-          
         }}
       >
         <img
           alt='background'
           style={{
             objectFit: 'cover',
-            width: '100%',
+            width: '100vw',
             zIndex: -1,
-            
           }}
           src={background}
         />

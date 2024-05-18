@@ -5,8 +5,8 @@ function PageWrapper({ children }: PageWrapperProps) {
     <div
       style={{
         position: 'relative',
-        margin: 0,
-        padding: 0,
+        width: 'auto',
+        marginInline: 'auto',
       }}
     >
       {children}

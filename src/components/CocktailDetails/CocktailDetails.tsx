@@ -36,18 +36,16 @@ function CocktailDetails({ cocktail }: CocktailDetailsProps) {
           }}
         >
           <CocktailImage imgSrc={cocktail.thumbnail} alt={cocktail.name} />
-
+          <CocktailRowWrapper flexDirection='column'>
+            <CocktailIngredients ingredients={cocktail.ingredients} measures={cocktail.measures} />
+            <CocktailInstructions instructions={cocktail.instructions} />
+          </CocktailRowWrapper>
           <CocktailRowWrapper flexDirection='column'>
             <CocktailDetailItem title='Category' value={cocktail.category} />
             <CocktailDetailItem title='Alcoholic' value={cocktail.alcoholic} />
             <CocktailDetailItem title='Glass' value={cocktail.glass} />
           </CocktailRowWrapper>
         </div>
-
-        <CocktailRowWrapper>
-          <CocktailIngredients ingredients={cocktail.ingredients} measures={cocktail.measures} />
-          <CocktailInstructions instructions={cocktail.instructions} />
-        </CocktailRowWrapper>
       </div>
     </div>
   );

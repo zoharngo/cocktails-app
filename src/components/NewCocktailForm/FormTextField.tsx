@@ -32,7 +32,7 @@ function FormTextField({ label, name, type, placeholder, register, errors, requi
         id={name}
         name={name}
         placeholder={placeholder}
-        {...register(name, { required: true })}
+        {...register(name, { required })}
       />
       {errors[name] && (
         <span
