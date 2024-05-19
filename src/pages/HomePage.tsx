@@ -1,25 +1,23 @@
 import background from '../assets/images/home.jpg';
-import PageWrapper from '../components/PageWrapper';
 
 function HomePage() {
   return (
-    <PageWrapper>
+    <>
       <div
         style={{
           position: 'absolute',
           inset: 0,
           zIndex: -10,
-          top: 0,
+          filter: 'brightness(0.5)',
+          overflow: 'hidden',
           display: 'flex',
-          height: '100vh',
         }}
       >
         <img
           alt='background'
           style={{
             objectFit: 'cover',
-            width: '100vw',
-            zIndex: -1,
+            width: '100%',
           }}
           src={background}
         />
@@ -31,7 +29,6 @@ function HomePage() {
           justifyContent: 'flex-start',
           alignItems: 'flex-start',
           flexDirection: 'column',
-          height: '100%',
           color: '#f09999',
           textShadow: '2px 2px 4px rgba(0, 0, 0, 1.5)',
           padding: '20px',
@@ -46,16 +43,17 @@ function HomePage() {
         >
           Welcome to the Cocktail App
         </h1>
-        <p
+        <span
           style={{
-            maxWidth: '30%',
+            maxWidth: '33.3%',
             fontSize: '1.5rem',
+            wordBreak: 'break-word',
           }}
         >
           This app allows you to search for cocktails, view details about them, and even create your own cocktails.
-        </p>
+        </span>
       </div>
-    </PageWrapper>
+    </>
   );
 }
 

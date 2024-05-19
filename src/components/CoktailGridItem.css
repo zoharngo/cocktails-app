@@ -1,6 +1,5 @@
 .CoktailGridItem {
-    background-color: whitesmoke;
-    color: black;
+    color: rgb(202, 157, 157);
     text-shadow: 1px 1px 1px #9e9292;
     padding: 20px;
     border-radius: 5px;
@@ -11,9 +10,11 @@
     flex-direction: column;
     cursor: pointer;
     transition: box-shadow 0.3s, transform 0.3s;
+    background-color: 'rgba(255, 255, 255, 0.8)';
 }
 
 .CoktailGridItem:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px #d44444;
+    box-shadow: 0 5px 15px #f09999;
+    ;
 }

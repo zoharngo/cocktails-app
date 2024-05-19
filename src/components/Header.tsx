@@ -10,30 +10,28 @@ function Header() {
   return (
     <header
       style={{
-        backgroundColor: '#282c34',
-        color: 'white',
-        padding: '10px 20px',
+        boxShadow: '0 2px 20px rgba(252, 250, 250, 0.5)',
+        padding: '15px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
         position: 'sticky',
         top: 0,
         zIndex: 100,
+        background: 'black',
       }}
     >
       <Link
         style={{
           color: 'white',
           textDecoration: 'none',
-          fontSize: '1rem',
-          textShadow: '1px 1px 1px rgba(0, 0, 0, 0.5)',
         }}
         to='/'
       >
         <h1
           style={{
-            fontSize: 'inherit',
+            fontSize: '1.5rem',
+            textShadow: '2px 2px 20px rgba(250, 242, 242, 0.5)',
             margin: 0,
           }}
         >
@@ -48,7 +46,6 @@ function Header() {
             gap: '20px',
             alignItems: 'center',
             margin: 0,
-            fontSize: '0.8rem',
             flexDirection: 'row',
             flexWrap: 'wrap',
             flexGrow: 1,

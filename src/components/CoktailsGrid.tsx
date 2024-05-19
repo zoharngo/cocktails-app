@@ -7,7 +7,7 @@ function CoktailGrid({ coktailGridItems }: CoktailGridProps) {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-        gap: '1rem',
+        gap: '1.4rem',
         margin: '0 auto',
         padding: '20px',
         position: 'relative',

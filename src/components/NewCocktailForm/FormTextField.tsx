@@ -10,21 +10,14 @@ function FormTextField({ label, name, type, placeholder, register, errors, requi
         width: '300px',
       }}
     >
-      <label
-        style={{
-          fontSize: '1.2em',
-        }}
-        htmlFor={name}
-        aria-required='true'
-      >
+      <label htmlFor={name} aria-required='true'>
         {label}
       </label>
       <input
         style={{
           padding: '10px',
-          fontSize: '1em',
           border: '1px solid #ccc',
-          boxShadow: '1px 1px 1px #999',
+          boxShadow: '0 0 10px #cbd2e0',
           boxSizing: 'border-box',
           borderRadius: '5px',
         }}

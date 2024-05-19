@@ -15,6 +15,7 @@ function CocktailsContainer() {
         alignItems: 'center',
         justifyContent: 'center',
         marginBlock: '50px',
+        marginInline: '20px',
       }}
     >
       <SearchInput searchValue={searchTerm} setSearchValue={setSearchTerm} />

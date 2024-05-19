@@ -32,8 +32,8 @@ function NewCocktailForm() {
       thumbnail: thumbnail[0]?.name || 'https://via.placeholder.com/150',
     };
     addNewCocktail(newCocktail);
-    //reset();
-    //alert('Cocktail added successfully');
+    reset();
+    alert('Cocktail added successfully');
   };
 
   return (
