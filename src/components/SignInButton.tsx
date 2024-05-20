@@ -14,14 +14,14 @@ function SignInButton() {
       const credtialsDecode = credRes.credential && jwtDecode(credRes.credential);
       const { name, email, picture } = credtialsDecode as User;
       setUser({ name, email, picture });
-      navigate('/cocktails');
+      navigate('/cocktails-app/search');
     },
     [navigate, setUser]
   );
 
   const onError = useCallback(() => {
     console.log('Login Error');
-    navigate('/');
+    navigate('/cocktails-app');
   }, [navigate]);
 
   return (

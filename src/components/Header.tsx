@@ -26,7 +26,7 @@ function Header() {
           color: 'white',
           textDecoration: 'none',
         }}
-        to='/'
+        to='/cocktails-app'
       >
         <h1
           style={{
@@ -60,7 +60,7 @@ function Header() {
                     color: 'white',
                     textDecoration: 'none',
                   }}
-                  to='/'
+                  to='/cocktails-app'
                 >
                   Home
                 </Link>
@@ -71,7 +71,7 @@ function Header() {
                     color: 'white',
                     textDecoration: 'none',
                   }}
-                  to='/cocktails'
+                  to='/cocktails-app/search'
                 >
                   Search
                 </Link>
@@ -82,7 +82,7 @@ function Header() {
                     color: 'white',
                     textDecoration: 'none',
                   }}
-                  to='/cocktails/create'
+                  to='/cocktails-app/create'
                 >
                   Create
                 </Link>

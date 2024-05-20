@@ -18,10 +18,10 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/cocktails' element={user ? <CocktailsPage /> : <Navigate to='/' replace />} />
-          <Route path='/cocktails/:id' element={user ? <CocktailDetailsPage /> : <Navigate to='/' replace />} />
-          <Route path='/cocktails/create' element={user ? <NewCocktailPage /> : <Navigate to='/' replace />} />
-          <Route path='/' element={<HomePage />} />
+          <Route path='/cocktails-app/search' element={user ? <CocktailsPage /> : <Navigate to='/' replace />} />
+          <Route path='/cocktails-app/:id' element={user ? <CocktailDetailsPage /> : <Navigate to='/' replace />} />
+          <Route path='/cocktails-app/create' element={user ? <NewCocktailPage /> : <Navigate to='/' replace />} />
+          <Route path='/cocktails-app' element={<HomePage />} />
         </Routes>
         <Footer />
       </Router>

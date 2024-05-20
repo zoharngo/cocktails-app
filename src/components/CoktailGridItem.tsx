@@ -7,7 +7,7 @@ function CoktailGridItem({ cocktail }: CoktailGridItemProps) {
   const navigate = useNavigate();
 
   const navigateToCocktailDetails = useCallback(() => {
-    navigate(`/cocktails/${cocktail.id}`);
+    navigate(`/cocktails-app/${cocktail.id}`);
   }, [navigate, cocktail.id]);
 
   return (
