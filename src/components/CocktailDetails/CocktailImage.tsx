@@ -16,6 +16,7 @@ function CocktailImage({ imgSrc, alt }: { imgSrc: string; alt: string }) {
         }}
         src={imgSrc}
         alt={alt}
+        referrerPolicy="no-referrer"
       />
     </div>
   );

@@ -3,6 +3,7 @@ import { useCallback } from 'react';
 import { useContext } from 'react';
 import UserContext from '../contexts/UserContext';
 import { useNavigate } from 'react-router-dom';
+import UserAvatar from './UserAvatar';
 
 function SignOutButton() {
   const navigate = useNavigate();
@@ -37,11 +38,9 @@ function SignOutButton() {
           gap: '10px',
           padding: '5px 10px',
           width: '115px',
-
         }}
         onClick={onSignOut}
       >
-      
         Sign Out
         <span
           style={{
@@ -56,19 +55,7 @@ function SignOutButton() {
             borderRadius: '50%',
           }}
         >
-          {user && (
-            <img
-              alt='user'
-              style={{
-                width: '20px',
-                height: '20px',
-                borderRadius: '50%',
-                objectFit: 'cover',
-              }}
-              src={user.picture}
-              referrerPolicy='no-referrer'
-            />
-          )}
+          {user && <UserAvatar user={user} />}
         </span>
       </button>
     </div>

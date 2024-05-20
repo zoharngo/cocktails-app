@@ -1,7 +1,19 @@
-import { User } from "../common/types/user";
+import { User } from '../common/types/user';
 
 function UserAvatar(props: { user: User }) {
-  return <img src={props.user.picture} alt={props.user.name} />;
+  return (
+    <img
+      alt='user'
+      style={{
+        width: '20px',
+        height: '20px',
+        borderRadius: '50%',
+        objectFit: 'cover',
+      }}
+      src={props.user.picture}
+      referrerPolicy='no-referrer'
+    />
+  );
 }
 
 export default UserAvatar;

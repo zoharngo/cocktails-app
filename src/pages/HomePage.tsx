@@ -20,6 +20,7 @@ function HomePage() {
             width: '100%',
           }}
           src={background}
+          referrerPolicy='no-referrer'
         />
       </div>
       <div
