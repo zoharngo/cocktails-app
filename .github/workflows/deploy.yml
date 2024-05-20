@@ -22,8 +22,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-        with:
-          env:
+        env:
             NODE_ENV: production
             VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
 
